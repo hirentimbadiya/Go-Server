@@ -32,6 +32,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 	// it will check PrseForm and if there is an error it will print the error
 	if err := r.ParseForm(); err != nil {
 		fmt.Fprintf(w, "ParseForm() Error: %v", err)
+		return
 	}
 	fmt.Fprintf(w, "POST Request is Successful!\n")
 
